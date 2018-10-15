@@ -22,7 +22,8 @@ nav .input-field label i{
     color: #000;
 }
 nav .brand-logo {
-    color: #000
+    color: #000;
+    font-size: 1.8rem;
 }
 nav ul a{
     letter-spacing: 1.3px;
@@ -54,6 +55,12 @@ li .links:hover::after {
     width: 100%;
     transition: width .3s;
 }
+.parallax-container img{
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .modal-content .logo {
     text-transform: uppercase;
@@ -65,12 +72,44 @@ li .links:hover::after {
 .modal-content button:hover {
     background-color: #5b96da;
 }
-.slider .slides {
-    background-color: #8797a1;
+.create-account a{
+    color: #ff1000
 }
-.slider .slides i {
-    text-transform: uppercase;
+.section {
+    padding-bottom: 0rem;
+}
+.row {
+    margin-bottom: 0px;
+}
+.parallax-container h1 {
+    font-size: 3rem !important;
+    color: #3d8ce6;
     font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    word-spacing: 8px;
+}
+.parallax-container h2 {
+    font-size: 2.5rem;
+    color: #3d8ce6;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    word-spacing: 8px;
+}
+.parallax-container h3 {
+    font-size: 1.8rem;
+    color: #3d8ce6;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.parallax-container p {
+    font-size: 24px !important;
+}
+.button-nav{
+    margin : 5% 0% 5% 0%;
+    padding: 20px 0px 20px 0px;
 }
 .button-nav a{
     color: #464f53 ;
@@ -78,7 +117,24 @@ li .links:hover::after {
 .button-nav a:hover {
     color: #577683
 }
-  
+.button-nav i {
+    margin-top: 20px;
+}
+label {
+    font-size: 14px;
+}
+.register p {
+    font-size: 1.2rem;
+    padding: 20px 0px 0px 0px;
+    color: rgb(255, 255, 255);
+}
+.register .btn-register {
+    padding-bottom: 3%;
+}
+.register .btn-register .btn-large {
+    background-color: #3d8ce6;
+}
+
 .input-field .prefix.active {
     color: #3d8ce6
 }
@@ -94,6 +150,33 @@ input:not([type]):focus:not([readonly])+label, input[type=text]:not(.browser-def
     color: #3d8ce6;
 }
 
+#contents h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+#contents i {
+    color: #3d8ce6;
+}
+#contents .card-action a {
+    background-color: #3d8ce6;
+}
+
+#offre {
+    padding-top:50px;
+    margin-top:-50px;
+}
+#demande {
+    padding-top:50px;
+    margin-top:-50px;
+}
+#deal {
+    padding-top:50px;
+    margin-top:-50px;
+}
+
+
+
+
 @media only screen and (min-width: 1362px){
     .hide-on-med-and-down{
         display: block !important;
@@ -104,4 +187,39 @@ input:not([type]):focus:not([readonly])+label, input[type=text]:not(.browser-def
         width: 98%;
     }
 }
+@media only screen and (min-width: 320px) and (max-width: 374px){
+    .parallax-container {
+        height: 160px;
+    }
+}
+@media only screen and (min-width: 375px) and (max-width: 424px){
+    .parallax-container {
+        height: 180px;
+    }
+}
+@media only screen and (min-width: 425px) and (max-width: 469px){
+    .parallax-container {
+        height: 210px;
+    }
+}
+@media only screen and (min-width: 470px) and (max-width: 619px){
+    .parallax-container {
+        height: 250px;
+    }
+}
+@media only screen and (min-width: 620px) and (max-width: 767px){
+    .parallax-container {
+        height: 350px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    .parallax-container {
+        height: 420px;
+    }
+}
 
+@media only screen and (max-width: 600px){
+    .button-nav i{
+        margin-bottom: 100%;
+    }
+}

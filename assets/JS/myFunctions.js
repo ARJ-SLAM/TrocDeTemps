@@ -1,9 +1,14 @@
 $(document).ready(function(){
 
     $('.modal').modal();
+    $('#modalSignIn').modal('open'); 
 
     $('.sidenav').sidenav();
-    
+    $('.parallax').parallax();
 
-    $('.slider').slider();
+    $('.carousel.carousel-slider').carousel({
+        fullWidth: true,
+        indicators: true,
+    });
+    
 });
