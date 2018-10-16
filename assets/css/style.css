@@ -91,7 +91,7 @@ li .links:hover::after {
 }
 .parallax-container h2 {
     font-size: 2.5rem;
-    color: #3d8ce6;
+    color: #1560b6;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -99,7 +99,7 @@ li .links:hover::after {
 }
 .parallax-container h3 {
     font-size: 1.8rem;
-    color: #3d8ce6;
+    color: #1560b6;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -115,7 +115,7 @@ li .links:hover::after {
     color: #464f53 ;
 }
 .button-nav a:hover {
-    color: #577683
+    color: #1560b6;
 }
 .button-nav i {
     margin-top: 20px;
@@ -184,7 +184,7 @@ input:not([type]):focus:not([readonly])+label, input[type=text]:not(.browser-def
 }
 @media only screen and (min-width: 993px){
     .container {
-        width: 98%;
+        width: 105%;
     }
 }
 @media only screen and (min-width: 320px) and (max-width: 374px){

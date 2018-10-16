@@ -1,4 +1,4 @@
-<html lang="fr">
+<!-- <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,16 +13,29 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/style.css">
     <link rel="icon" href="">
 
-    <!-- script -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="<?php echo base_url();?>assets/JS/myFunctions.js"></script>
+    <script src="<?php echo base_url();?>assets/JS/Connexion_inscription_fonction.js"></script>
+        <script>
+            $(document).ready(function(){
+            
+            $('a[title|="modal_inscription"]').click(function(){
+                acces_inscription();
+                $('.modal').modal();
+            })
+            $('a[title|="modal_connexion"]').click(function(){
+                acces_connexion();
+                $('.modal').modal();
+            })
+        });
+        </script>
 </head>
 
 <body >
     <header id="header" >
         <!-- Navbar -->
-        <div class="navbar-fixed" >
+        <!-- <div class="navbar-fixed" >
             <nav role="navigation" class="">
                 <div class="nav-wrapper container">
                     <div class="nav-header">
@@ -37,13 +50,13 @@
                         <li><a href="#deal" class="links">Mes deals</a></li>
                     </ul>
                     <ul id="id-nav-connect" class="right hide-on-med-and-down">
-                        <li><a href="#" class="links modal-trigger" title="modal_inscription">Inscription</a></li>
-                        <li><a href="#modalSignIn" class="links modal-trigger" title="modal_connexion">Connexion</a></li>
+                        <li><a href="#modal" class="links modal-trigger" title="modal_inscription">Inscription</a></li>
+                        <li><a href="#modal" class="links modal-trigger" title="modal_connexion">Connexion</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
-        <!-- Toggle Navigation -->
+
         <ul id="mobile-links" class="sidenav" >
             <li class="mobile-nav-logo">
                 <div class="brand-logo center">E-traiding</div>
@@ -55,10 +68,10 @@
             <li><a href="#offre">Mes offres</a></li>
             <li><a href="#demande">Mes demandes</a></li>
             <li><a href="#deal">Mes deals</a></li>
-            <li><a href="#" class="modal-trigger" title="modal_inscription">Inscription</a></li>
-            <li><a href="#modalSignIn" class="modal-trigger" title="modal_connexion">Connexion</a></li>
+            <li><a href="#modal" class="modal-trigger" title="modal_inscription">Inscription</a></li>
+            <li><a href="#modal" class="modal-trigger" title="modal_connexion">Connexion</a></li>
         </ul>
-    </header>
+    </header>  -->
 
     <div id="Contents">
 
@@ -227,7 +240,7 @@
         
     </div>
 
-    <div id="footer">
+    <!-- <div id="footer">
         <footer class="page-footer">
             <div class="container">
                 <div class="row">
@@ -241,4 +254,4 @@
     </div>
 
 </body>
-</html>
+</html> -->
