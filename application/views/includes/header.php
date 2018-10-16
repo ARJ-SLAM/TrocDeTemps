@@ -20,15 +20,7 @@
         <script src="<?php echo base_url();?>assets/JS/Connexion_inscription_fonction.js"></script>
         <script>
             $(document).ready(function(){
-            $('.sidenav').sidenav();
             
-            $(window).scroll(function(){
-                if ($(window).scrollTop()>300){
-                    $('nav').addClass('blue-grey lighten-3');
-                }else{
-                    $('nav').removeClass('blue-grey lighten-3');
-                }
-            });
             $('a[title|="modal_inscription"]').click(function(){
                 acces_inscription();
                 $('.modal').modal();
