@@ -24,9 +24,9 @@
             
             $(window).scroll(function(){
                 if ($(window).scrollTop()>300){
-                    $('nav').addClass('blue-grey');
+                    $('nav').addClass('blue-grey lighten-3');
                 }else{
-                    $('nav').removeClass('blue-grey');
+                    $('nav').removeClass('blue-grey lighten-3');
                 }
             });
             $('a[title|="modal_inscription"]').click(function(){

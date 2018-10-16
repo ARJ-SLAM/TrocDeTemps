@@ -72,7 +72,7 @@
                 </div>
             </div>
             <div class="parallax parallax-footer">
-                <img src="<?php echo base_url();?>assets/img/test.jpg ">
+                <img src="<?php echo base_url();?>assets/img/lerebours.jpg ">
             </div>
         </div>
     </section>

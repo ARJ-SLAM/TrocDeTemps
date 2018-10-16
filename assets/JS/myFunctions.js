@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
     $('.modal').modal();
-    $('#modalSignIn').modal('open'); 
+    $('#modal').modal('open'); 
 
     $('.sidenav').sidenav();
     $('.parallax').parallax();
