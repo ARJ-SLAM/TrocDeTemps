@@ -16,7 +16,29 @@
         <!-- script -->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="<?php echo base_url();?>assets/JS/Connexion_inscription_function.js"></script>
         <script src="<?php echo base_url();?>assets/JS/myFunctions.js"></script>
+        <script>
+            $(document).ready(function(){
+            $('.sidenav').sidenav();
+            
+            $(window).scroll(function(){
+                if ($(window).scrollTop()>300){
+                    $('nav').addClass('blue-grey');
+                }else{
+                    $('nav').removeClass('blue-grey');
+                }
+            });
+            $('a[title|="modal_inscription"]').click(function(){
+                acces_inscription();
+                $('.modal').modal();
+            })
+            $('a[title|="modal_connexion"]').click(function(){
+                acces_connexion();
+                $('.modal').modal();
+            })
+        });
+        </script>
     </head>
 
     <body >
@@ -39,6 +61,7 @@
                         <ul id="id-nav-connect" class="right hide-on-med-and-down">
                             <li><a href="#" class="links modal-trigger" title="modal_inscription">Inscription</a></li>
                             <li><a href="#modalSignIn" class="links modal-trigger" title="modal_connexion">Connexion</a></li>
+                            <li id="connecter"></li>
                         </ul>
                     </div>
                 </nav>
@@ -57,11 +80,12 @@
                 <li><a href="profil#deal">Mes deals</a></li>
                 <li><a href="#" class="modal-trigger" title="modal_inscription">Inscription</a></li>
                 <li><a href="#modalSignIn" class="modal-trigger" title="modal_connexion">Connexion</a></li>
+                <li id="mobile_connecter"></li>
             </ul>
 
             <!-- Modal Sign In -->
-            <div id="modalSignIn" class="modal">
-                <div class="modal-content">
+            <div id="idmodal" class="modal">
+                <!-- <div class="modal-content">
                     <h4 class="center">Bienvenue sur <i class="logo">E-Trading</i></h4>
                     <h5 class="center">Connectez-vous !</h5>
                     <div class="divider"></div><br/>
@@ -92,7 +116,7 @@
                         </div>
                 
                     </div>
-                </div>
+                </div>-->
             </div>
 
         </header>
