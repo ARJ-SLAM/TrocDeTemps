@@ -3,7 +3,7 @@ class Model_connexion_inscription extends CI_Model
 {
     public function getUserByNameAndPassword($login, $password)
     {
-        $sql = $this->db->query("select login, nomUser, photoUser from user where mdp = '".$password."' and login = '".$login."'");
+        $sql = $this->db->query("select idUser, login, nomUser, photoUser from user where mdp = '".$password."' and login = '".$login."'");
         return $sql->result();
     }
 

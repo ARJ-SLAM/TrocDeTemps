@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
     $(window).scroll(function(){
         if ($(window).scrollTop()>300){
             $('nav').addClass('blue-grey lighten-3');
@@ -16,5 +17,4 @@ $(document).ready(function(){
         fullWidth: true,
         indicators: true,
     });
-    
 });

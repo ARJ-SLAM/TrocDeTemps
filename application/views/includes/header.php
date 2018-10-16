@@ -21,8 +21,9 @@
         <script>
             $(document).ready(function(){
 
+            acces_connexion();
             $('#modal').modal('open');
-            
+
             $('a[title|="modal_inscription"]').click(function(){
                 acces_inscription();
                 $('.modal').modal();
