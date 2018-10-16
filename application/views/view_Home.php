@@ -21,15 +21,15 @@
     <!-- script -->
     <script>
         $(document).ready(function(){
-            $('.sidenav').sidenav();
+            // $('.sidenav').sidenav();
             
-            $(window).scroll(function(){
-                if ($(window).scrollTop()>300){
-                    $('nav').addClass('blue-grey');
-                }else{
-                    $('nav').removeClass('blue-grey');
-                }
-            });
+            // $(window).scroll(function(){
+            //     if ($(window).scrollTop()>300){
+            //         $('nav').addClass('blue-grey');
+            //     }else{
+            //         $('nav').removeClass('blue-grey');
+            //     }
+            // });
             $('a[title|="modal_inscription"]').click(function(){
                 acces_inscription();
                 $('.modal').modal();
