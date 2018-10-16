@@ -5,6 +5,13 @@ class ctrl extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('offre');
+		$this->load->view('view_offre');
+	}
+
+	function AfficherLesOffres() 
+	{
+		$this->load->model("model_offres");
+		$tab["lesOffres"] = $this->model_offres->postLesOffres();
+		$this->load->view("view_offre,$tab");
 	}
 }
