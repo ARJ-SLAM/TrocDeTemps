@@ -16,7 +16,13 @@
         
         function getLesServices($idCateg)
         {
-            $sql = $this->db->query("select idService, nomService, photoService from service where idCateg=".$idCateg);
+            $sql = $this->db->query("select idService, nomService from service where idCateg=".$idCateg);
+            return $sql->result();
+        }
+
+        function getPhotoService($idService)
+        {
+            $sql = $this->db->query("select photoService from service where idService=".$idService);
             return $sql->result();
         }
 

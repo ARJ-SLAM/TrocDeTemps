@@ -48,12 +48,33 @@ function modifServices(idCateg)
             data:"idCateg=" + idCateg,
             success:function(data)
             {
-                $('#lesServices').empty();
-                $('#lesServices').append(data);
+                $('#divServices').empty();
+                $('#divServices').append(data);
             },
             error:function()
             {
                 alert("Erreur de chargement des Services");
+            }
+        }
+    );
+}
+
+function modifPhoto(idService)
+{
+    $.ajax
+    (
+        {
+            type:"post",
+            url:"index.php/Ctrl/modifPhoto",
+            data:"idService=" + idService,
+            success:function(data)
+            {
+                $('#photo').empty();
+                $('#photo').append(data);
+            },
+            error:function()
+            {
+                alert("Erreur de chargement des Photos");
             }
         }
     );

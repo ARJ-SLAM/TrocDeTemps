@@ -18,7 +18,8 @@ class Ctrl extends CI_Controller {
 	{
 		$this->load->model("Model_offres");
 		$tab["lesCateg"] = $this->Model_offres->getLesCategories();
-		$tab["lesServices"] = $this->Model_offres->getLesServices("1");
+		$tab["lesServices"] = $this->Model_offres->getLesServices($tab['lesCateg'][0]->idCateg);
+		$tab["photoServices"] = $this->Model_offres->getPhotoService($tab['lesServices'][0]->idService);
         $tab["maxOffres"] = $this->Model_offres->maxOffres();
 		$this->load->view('view_newOffre',$tab);
 		
@@ -28,7 +29,8 @@ class Ctrl extends CI_Controller {
 	{
 		$this->load->model("Model_demandes");
 		$tab["lesCateg"] = $this->Model_demandes->getLesCategories();
-		$tab["lesServices"] = $this->Model_demandes->getLesServices("1");
+		$tab["lesServices"] = $this->Model_demandes->getLesServices($tab['lesCateg'][0]->idCateg);
+		$tab["photoServices"] = $this->Model_demandes->getPhotoService($tab['lesServices'][0]->idService);
         $tab["maxDemandes"] = $this->Model_demandes->maxDemandes();
 		$this->load->view('view_newDemande',$tab);
 		
@@ -38,7 +40,15 @@ class Ctrl extends CI_Controller {
 	{
 		$this->load->model("Model_offres");
 		$tab["lesServices"] = $this->Model_offres->getLesServices($_POST['idCateg']);
+		$tab["photoServices"] = $this->Model_offres->getPhotoService($tab['lesServices'][0]->idService);
 		$this->load->view('view_lesServices',$tab);
+	}
+
+	public function modifPhoto()
+	{
+		$this->load->model("Model_offres");
+		$tab["photoServices"] = $this->Model_offres->getPhotoService($_POST['idService']);
+		$this->load->view('view_lesPhotos',$tab);
 	}
 
 	// public function CréerUneOffre()

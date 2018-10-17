@@ -20,6 +20,11 @@
             return $sql->result();
         }
 
+        function getPhotoService($idService)
+        {
+            $sql = $this->db->query("select photoService from service where idService=".$idService);
+        }
+
         function maxDemandes()
         {
             $sql = $this->db->query("select max(idDemande) as idDemande from demande");

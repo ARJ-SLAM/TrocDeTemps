@@ -19,6 +19,14 @@
 
 </select> <br>
 
+<div id='divServices'>
+<?php
+    foreach($photoServices as $unePhoto)
+    {
+        echo "<p id='photo'><img src='".$unePhoto->photoService."'><p>";
+    }
+?>
+
 <select id="lesServices">
 
 <?php
@@ -28,7 +36,8 @@
     }
 ?>
 
-</select> <br>
+</select> 
+</div> <br>
 
 <textarea id="description"></textarea> <br>
 
