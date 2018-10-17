@@ -16,13 +16,13 @@
         
         function getLesServices($idCateg)
         {
-            $sql = $this->db->query("select idService, nomService from service where idCateg=".$idCateg);
+            $sql = $this->db->query("select idService, nomService, photoService from service where idCateg=".$idCateg);
             return $sql->result();
         }
 
         function maxDemandes()
         {
-            $sql = $this->db->query("select max(idDemande) as idDemande from offre");
+            $sql = $this->db->query("select max(idDemande) as idDemande from demande");
             return $sql->result();
         }
 
