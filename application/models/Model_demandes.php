@@ -31,9 +31,21 @@
             return $sql->result();
         }
 
-        function creerUneDemande()
+        function creerUneDemande($user,$dateDemande,$idDemande,$idService,$descriptionDemande)
         {
+            $sql = $this->db->query("insert into demande(idDemande, descriptionDemande, dateDemande, idService, idUser) values($idDemande, '$descriptionDemande', '$dateDemande', $idService, $user)");
+        }
 
+        function afficheDemande($idDemande)
+        {
+            $sql = $this->db->query("select idDemande, descriptionDemande, demande.idService as idService, nomService from demande inner join service on demande.idService = service.idService where idDemande=".$idDemande);
+            return $sql->result();
+        }
+
+        function modifDemande($dateDemande,$idDemande,$descriptionDemande)
+        {
+            $sql = $this->db->query("update demande set descriptionDemande = '$descriptionDemande' where idDemande =" . $idDemande);
+            $sql = $this->db->query("update demande set dateDemande = '$dateDemande' where idDemande =" . $idDemande);
         }
     }
 

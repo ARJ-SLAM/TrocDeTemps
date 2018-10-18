@@ -3,7 +3,7 @@
     foreach($maxDemandes as $idDemande)
     {
         $id = $idDemande->idDemande+1;
-        echo "<input type='text' disabled='true' value='".$id."'><br>";
+        echo "<input id='idDemande' type='text' disabled='true' value='".$id."'><br>";
     }
 
 ?>
@@ -19,6 +19,14 @@
 
 </select> <br>
 
+<div id='divServices'>
+<?php
+    foreach($photoServices as $unePhoto)
+    {
+        echo "<p id='photo'><img src='".$unePhoto->photoService."'><p>";
+    }
+?>
+
 <select id="lesServices">
 
 <?php
@@ -28,8 +36,12 @@
     }
 ?>
 
-</select> <br>
+</select>
+
+</div>
+
+ <br>
 
 <textarea id="description"></textarea> <br>
 
-<input type="button" value="Créer la demande" id="btnnewDemande">
+<input type="button" value="Créer la demande" id="btnnewDemande" onclick="CreerUneDemande()">

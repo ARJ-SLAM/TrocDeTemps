@@ -38,12 +38,15 @@
         <?php 
             foreach($lesOffres as $uneOffre)
             {
-                echo $uneOffre->idOffre."<br>";
-                echo $uneOffre->descriptionOffre."<br>";
-                echo $uneOffre->dateOffre."<br>";
-                echo $uneOffre->idService."<br>";
+                ?>
+                <input type='button' onclick="updateOffre(<?php echo $uneOffre->idOffre ?>)" value="
+                <?php
+                echo $uneOffre->idOffre."    ";
+                echo $uneOffre->descriptionOffre."    ";
+                echo $uneOffre->dateOffre."    ";
+                echo $uneOffre->idService."    ";?>"> <br>
+                <?php
             }
-
         ?>
     </div>
 
@@ -55,14 +58,17 @@
 
 <div id="divDemandes">
     <?php 
-        foreach($lesDemandes as $uneDemandes)
+        foreach($lesDemandes as $uneDemande)
         {
-            echo $uneDemandes->idDemande."<br>";
-            echo $uneDemandes->descriptionDemande."<br>";
-            echo $uneDemandes->dateDemande."<br>";
-            echo $uneDemandes->idService."<br>";
+            ?>
+            <input type='button' onclick="updateDemande(<?php echo $uneDemande->idDemande ?>)" value="
+            <?php
+            echo $uneDemande->idDemande."    ";
+            echo $uneDemande->descriptionDemande."    ";
+            echo $uneDemande->dateDemande."    ";
+            echo $uneDemande->idService."    ";?>"> <br>
+            <?php
         }
-
     ?>
 </div>
 

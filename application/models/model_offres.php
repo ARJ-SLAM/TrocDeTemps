@@ -32,9 +32,21 @@
             return $sql->result();
         }
 
-        function creerUneOffre()
+        function creerUneOffre($user,$dateOffre,$idOffre,$idService,$descriptionOffre)
         {
+            $sql = $this->db->query("insert into offre(idOffre, descriptionOffre, dateOffre, idService, idUser) values($idOffre, '$descriptionOffre', '$dateOffre', $idService, $user)");
+        }
 
+        function afficheOffre($idOffre)
+        {
+            $sql = $this->db->query("select idOffre, descriptionOffre, offre.idService as idService, nomService from offre inner join service on offre.idService = service.idService where idOffre=".$idOffre);
+            return $sql->result();
+        }
+
+        function modifOffre($dateOffre,$idOffre,$descriptionOffre)
+        {
+            $sql = $this->db->query("update offre set descriptionOffre = '$descriptionOffre' where idOffre =" . $idOffre);
+            $sql = $this->db->query("update offre set dateOffre = '$dateOffre' where idOffre =" . $idOffre);
         }
     }
 

@@ -3,7 +3,7 @@
     foreach($maxOffres as $idOffre)
     {
         $id = $idOffre->idOffre+1;
-        echo "<input type='text' disabled='true' value='".$id."'><br>";
+        echo "<input id='idOffre' type='text' disabled='true' value='".$id."'><br>";
     }
 
 ?>
@@ -41,4 +41,4 @@
 
 <textarea id="description"></textarea> <br>
 
-<input type="button" value="Créer l'offre" id="btnnewOffre">
+<input type="button" value="Créer l'offre" id="btnnewOffre" onclick="CreerUneOffre()">
