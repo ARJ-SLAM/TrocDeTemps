@@ -23,14 +23,14 @@
                                 <div class="row">
                                     <label>Créer une Offre</label>
                                 </div>
-                                <a href="" title="Crée une Offre" ><i class="fas fa-gift fa-5x"></i></a>
+                                <a href="" id="newOffres" title="Crée une Offre" ><i class="fas fa-gift fa-5x"></i></a>
                             </div>
 
                             <div class="col l2 m2 s2 offset-l1 offset-m2 offset-s5 center"> 
                                 <div class="row">
                                     <label>Créer un Deal</label>
                                 </div>
-                                <a href="" title="Créer un Deal" ><i class="fas fa-hands-helping fa-5x"></i></a>
+                                <a href="" id="newDemandes" title="Créer un Deal" ><i class="fas fa-hands-helping fa-5x"></i></a>
                             </div>
 
                             <div class="col l2 m2 s2 offset-l2 offset-m2 offset-s5">
