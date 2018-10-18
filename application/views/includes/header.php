@@ -78,16 +78,17 @@
                 </div>
             </nav>
         </div>
-            <ul class="sidenav" id="mobile-links">
-                <li class="brand-logo">E-traiding</li>
-                <li><a href="home">Home</a></li>
-                <li><a href="profil#offre" >Mes offres</a></li>
-                <li><a href="profil#demande" >Mes demandes</a></li>
-                <li><a href="profil#deal" >Mes deals</a></li>
-                <li><a href="#modal" class="modal-trigger" title="modal_inscription">Inscription</a></li>
-                <li><a href="#modal" class="modal-trigger" title="modal_connexion">Connexion</a></li>
-                <li id="mobile_connecter"></li>
-            </ul>
+        
+        <ul class="sidenav" id="mobile-links">
+            <li class="brand-logo">E-traiding</li>
+            <li><a href="home">Home</a></li>
+            <li><a href="profil#offre" >Mes offres</a></li>
+            <li><a href="profil#demande" >Mes demandes</a></li>
+            <li><a href="profil#deal" >Mes deals</a></li>
+            <li><a href="#modal" class="modal-trigger" title="modal_inscription">Inscription</a></li>
+            <li><a href="#modal" class="modal-trigger" title="modal_connexion">Connexion</a></li>
+            <li id="mobile_connecter"></li>
+        </ul>
     </header>
 
         <!-- Modal Inscription -->
