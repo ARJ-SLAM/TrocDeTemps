@@ -3,8 +3,8 @@
         <section id="offre">
             <div class="container">
                 <div class="row">
-                    <h2>Mes Offres&nbsp;<a><i class="small material-icons">add</i></a></h2>
-                    <input type='button' value='Créer les offres' id='newOffres'>
+                    <h2>Mes Offres&nbsp;<a href="" id="newOffres"><i class="small material-icons">add</i></a></h2>
+
                     <div id="divOffres" class="row">
                     
                         <?php foreach($lesOffres as $uneOffre)
@@ -29,8 +29,8 @@
         <section id="demande">
             <div class="container">
                 <div class="row">
-                    <h2>Mes Demandes&nbsp;<a ><i class="small material-icons">add</i></a></h2>
-                    <input type='button' value='Créer les demandes' id='newDemandes'>
+                    <h2>Mes Demandes&nbsp;<a href="" id="newDemandes"><i class="small material-icons">add</i></a></h2>
+
                     <div id="divDemandes" class="row">
                         
                         <?php foreach($lesDemandes as $uneDemandes)
