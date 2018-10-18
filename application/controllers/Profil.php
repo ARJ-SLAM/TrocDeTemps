@@ -50,6 +50,45 @@ class Profil extends CI_Controller
 		$tab["photoServices"] = $this->Model_offres->getPhotoService($_POST['idService']);
 		$this->load->view('view_lesPhotos',$tab);
 	}
+	
+	public function CreerUneOffre()
+	{
+		$this->load->model("Model_offres");
+		$this->Model_offres->creerUneOffre($_POST['user'],$_POST['dateOffre'],$_POST['idOffre'],$_POST['idService'],$_POST['descriptionOffre']);
+		
+	}
 
+	public function updateOffre()
+	{
+		$this->load->model("Model_offres");
+		$tab["lesOffres"] = $this->Model_offres->afficheOffre($_POST['idOffre']);
+		$this->load->view('view_modifOffre',$tab);
+	}
+
+
+	public function modifOffre()
+	{
+		$this->load->model("Model_offres");
+		$this->Model_offres->modifOffre($_POST['dateOffre'],$_POST['idOffre'],$_POST['descriptionOffre']);
+	}
+
+	public function CreerUneDemande()
+	{
+		$this->load->model("Model_demandes");
+		$this->Model_demandes->creerUneDemande($_POST['user'],$_POST['dateDemande'],$_POST['idDemande'],$_POST['idService'],$_POST['descriptionDemande']);
+	}
+
+	public function updateDemande()
+	{
+		$this->load->model("Model_demandes");
+		$tab["lesDemandes"] = $this->Model_demandes->afficheDemande($_POST['idDemande']);
+		$this->load->view('view_modifDemande',$tab);
+	}
+
+	public function modifDemande()
+	{
+		$this->load->model("Model_demandes");
+		$this->Model_demandes->modifDemande($_POST['dateDemande'],$_POST['idDemande'],$_POST['descriptionDemande']);
+	}
 }
 ?>

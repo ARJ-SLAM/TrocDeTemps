@@ -9,15 +9,15 @@
                     
                         <?php foreach($lesOffres as $uneOffre)
                             {
-                            echo "<div class='col s12 m6 l3'>
+                            echo "<a onclick='updateOffre(".$uneOffre->idOffre.")'><div class='col s12 m6 l3'>
                                     <div class='card blue-grey darken-2 z-depth-3'>
                                         <div class='card-content white-text'>
-                                            <span class='card-title'>Card Title</span>
+                                            <span class='card-title'>Service n°".$uneOffre->idService."</span>
                                             <p>".$uneOffre->descriptionOffre."</p>
                                             <span class='date'>".$uneOffre->dateOffre."</span>
                                         </div>
                                     </div>
-                                </div>";
+                                </div></a>";
                             }
                         ?>
 
@@ -33,17 +33,17 @@
 
                     <div id="divDemandes" class="row">
                         
-                        <?php foreach($lesDemandes as $uneDemandes)
+                        <?php foreach($lesDemandes as $uneDemande)
                             {
-                            echo "<div class='col s12 m6 l3'>
+                            echo "<a onclick='updateDemande(".$uneDemande->idDemande.")'><div class='col s12 m6 l3'>
                                     <div class='card blue-grey darken-2 z-depth-3'>
                                         <div class='card-content white-text'>
-                                            <span class='card-title'>Card Title</span>
-                                            <p>".$uneDemandes->descriptionDemande."</p>
-                                            <span class='date'>".$uneDemandes->dateDemande."</span>
+                                        <span class='card-title'>Service n°".$uneDemande->idService."</span>
+                                            <p>".$uneDemande->descriptionDemande."</p>
+                                            <span class='date'>".$uneDemande->dateDemande."</span>
                                         </div>
                                     </div>
-                                </div>";
+                                </div></a>";
                             }
                         ?>
                         
