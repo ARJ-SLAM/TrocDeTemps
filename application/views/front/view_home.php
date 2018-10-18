@@ -59,7 +59,7 @@
                 </div>
                 <div class="row btn-register">
                     <div class="col m2 s5 offset-m5 offset-s3 center">
-                        <a class="waves-effect waves-light btn-large">S'inscrire</a>
+                        <a href="#modal" title="modal_inscription" class="waves-effect waves-light btn-large">S'inscrire</a>
                     </div>
                 </div>
             </div>

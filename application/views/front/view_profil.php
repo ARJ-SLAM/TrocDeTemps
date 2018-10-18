@@ -61,7 +61,7 @@
                         <div class="col s12 m6 l3">
                             <div class="card green center z-depth-3">
                                 <div class="card-image">
-                                     <img src="<?php echo base_url();?>assets/img/troc.jpg">
+                                     <img src="https://image.noelshack.com/fichiers/2018/22/4/1527779776-avatar3.jpg">
                                 </div>
                                 <div class="card-content white-text">
                                 <span class="card-title">Card Title</span>
@@ -77,7 +77,7 @@
                         <div class="col s12 m6 l3">
                             <div class="card red center z-depth-3">
                                 <div class="card-image">
-                                     <img src="<?php echo base_url();?>assets/img/troc.jpg">
+                                     <img src="https://image.noelshack.com/fichiers/2018/22/4/1527779776-avatar3.jpg">
                                 </div>
                                 <div class="card-content white-text">
                                 <span class="card-title">Card Title</span>
