@@ -18,8 +18,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script src="<?php echo base_url();?>assets/JS/myFunctions.js"></script>
         <script src="<?php echo base_url();?>assets/JS/Connexion_inscription_fonction.js"></script>
+        <script src="<?php echo base_url();?>assets/JS/mesFonctions.js"></script>
         <script>
-            $(document).ready(function(){
+        $(document).ready(function(){
 
             acces_connexion();
             $('#modal').modal('open');
@@ -28,11 +29,28 @@
                 acces_inscription();
                 $('.modal').modal();
             })
+
             $('a[title|="modal_connexion"]').click(function(){
                 acces_connexion();
                 $('.modal').modal();
             })
         });
+
+        $(
+            function()
+            {
+                $("#newOffres").click(function()
+                {
+                    AfficherNewOffre();
+                });
+
+                $("#newDemandes").click(function()
+                {
+                    AfficherNewDemande();
+                });
+
+            }
+        );
         </script>
     </head>
 
