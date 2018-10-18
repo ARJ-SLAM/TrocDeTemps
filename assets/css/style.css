@@ -150,6 +150,28 @@ input:not([type]):focus:not([readonly])+label, input[type=text]:not(.browser-def
     color: #3d8ce6;
 }
 
+#divOffres .card {
+    height: 170px;
+}
+#divOffres .card-content p {
+color: rgba(255,255,255,0.6);
+}
+#divOffres .date {
+    color: #0096ff;
+    font-weight: bold;
+}
+
+#divDemandes .card {
+    height: 170px;
+}
+#divDemandes .card-content p {
+color: rgba(255,255,255,0.6);
+}
+#divDemandes .date {
+    color: #0096ff;
+    font-weight: bold;
+}
+
 #contents h2 {
     font-size: 2.5rem;
     text-transform: uppercase;
@@ -184,7 +206,7 @@ input:not([type]):focus:not([readonly])+label, input[type=text]:not(.browser-def
 }
 @media only screen and (min-width: 993px){
     .container {
-        width: 98%;
+        width: 105%;
     }
 }
 @media only screen and (min-width: 320px) and (max-width: 374px){

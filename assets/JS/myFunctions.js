@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
     $(window).scroll(function(){
         if ($(window).scrollTop()>300){
             $('nav').addClass('blue-grey lighten-3');
@@ -8,7 +9,6 @@ $(document).ready(function(){
     });
     
     $('.modal').modal();
-    $('#modal').modal('open'); 
 
     $('.sidenav').sidenav();
     $('.parallax').parallax();
@@ -17,5 +17,4 @@ $(document).ready(function(){
         fullWidth: true,
         indicators: true,
     });
-    
 });

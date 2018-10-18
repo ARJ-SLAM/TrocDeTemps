@@ -18,18 +18,39 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script src="<?php echo base_url();?>assets/JS/myFunctions.js"></script>
         <script src="<?php echo base_url();?>assets/JS/Connexion_inscription_fonction.js"></script>
+        <script src="<?php echo base_url();?>assets/JS/mesFonctions.js"></script>
         <script>
-            $(document).ready(function(){
-            
+        $(document).ready(function(){
+
+            acces_connexion();
+            $('#modal').modal('open');
+
             $('a[title|="modal_inscription"]').click(function(){
                 acces_inscription();
                 $('.modal').modal();
             })
+
             $('a[title|="modal_connexion"]').click(function(){
                 acces_connexion();
                 $('.modal').modal();
             })
         });
+
+        $(
+            function()
+            {
+                $("#newOffres").click(function()
+                {
+                    AfficherNewOffre();
+                });
+
+                $("#newDemandes").click(function()
+                {
+                    AfficherNewDemande();
+                });
+
+            }
+        );
         </script>
     </head>
 
@@ -42,11 +63,13 @@
                         <a href="#" class="brand-logo">E-trading</a>
                         <a data-activates="slide-out" href="#" class="sidenav-trigger right" data-target="mobile-links"><i class="material-icons">menu</i></a>
 
-                        <ul class="right hide-on-med-and-down">
-                            <li class="active"><a href="#" class="links">Home</a></li>
+                        <ul id="id-nav" class="hide-on-med-and-down">
+                            <li class="active"><a href="home" class="links">Home</a></li>
                             <li><a href="profil#offre" class="links">Mes offres</a></li>
                             <li><a href="profil#demande" class="links">Mes demandes</a></li>
                             <li><a href="profil#deal" class="links">Mes deals</a></li>
+                        </ul>
+                        <ul id="id-nav-connect" class="right hide-on-med-and-down">
                             <li><a href="#modal" class="links modal-trigger" title="modal_inscription">Inscription</a></li>
                             <li><a href="#modal" class="links modal-trigger" title="modal_connexion">Connexion</a></li>
                             <li id="connecter"></li>
@@ -55,16 +78,17 @@
                 </div>
             </nav>
         </div>
-            <ul class="sidenav" id="mobile-links">
-                <li class="brand-logo">E-traiding</li>
-                <li><a href="#">Home</a></li>
-                <li><a href="profil#offre" class="links">Mes offres</a></li>
-                <li><a href="profil#demande" class="links">Mes demandes</a></li>
-                <li><a href="profil#deal" class="links">Mes deals</a></li>
-                <li><a href="#modal" class="modal-trigger" title="modal_inscription">Inscription</a></li>
-                <li><a href="#modal" class="modal-trigger" title="modal_connexion">Connexion</a></li>
-                <li id="mobile_connecter"></li>
-            </ul>
+        
+        <ul class="sidenav" id="mobile-links">
+            <li class="brand-logo">E-traiding</li>
+            <li><a href="home">Home</a></li>
+            <li><a href="profil#offre" >Mes offres</a></li>
+            <li><a href="profil#demande" >Mes demandes</a></li>
+            <li><a href="profil#deal" >Mes deals</a></li>
+            <li><a href="#modal" class="modal-trigger" title="modal_inscription">Inscription</a></li>
+            <li><a href="#modal" class="modal-trigger" title="modal_connexion">Connexion</a></li>
+            <li id="mobile_connecter"></li>
+        </ul>
     </header>
 
         <!-- Modal Inscription -->
