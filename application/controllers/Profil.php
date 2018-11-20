@@ -3,14 +3,19 @@ class Profil extends CI_Controller
 {
     public function index ()
     {
+		$id = $this->uri->segment(3);
         $this->load->model("Model_offres");
-		$data["lesOffres"] = $this->Model_offres->postLesOffres("1");
+		$data["lesOffres"] = $this->Model_offres->postLesOffres($id);
 
 		$this->load->model("Model_demandes");
-		$data["lesDemandes"] = $this->Model_demandes->postLesDemandes("1");
+		$data["lesDemandes"] = $this->Model_demandes->postLesDemandes($id);
+
+		$this->load->model("Jconnexion/Model_connexion_inscription");
+        $data["User"] = $this->Model_connexion_inscription->getUserById($id);
 
 
-        $data['main_contents'] = 'front/view_profil';
+		$data['main_contents'] = 'front/view_profil';
+		$data['id']= 1;
         $this->load->view('template', $data);
     }
     

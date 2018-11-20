@@ -22,35 +22,37 @@
         <script>
         $(document).ready(function(){
 
-            acces_connexion();
-            $('#modal').modal('open');
-
-            $('a[title|="modal_inscription"]').click(function(){
-                acces_inscription();
-                $('.modal').modal();
-            })
-
-            $('a[title|="modal_connexion"]').click(function(){
-                acces_connexion();
-                $('.modal').modal();
-            })
-        });
-
-        $(
-            function()
+            if (<?php echo $id ?> == 0)
             {
-                $("#newOffres").click(function()
-                {
-                    AfficherNewOffre();
-                });
-
-                $("#newDemandes").click(function()
-                {
-                    AfficherNewDemande();
-                });
-
+                $('#modal').empty();
+                acces_connexion();
+                $('#modal').modal('open');
             }
-        );
+
+            // $('a[title|="modal_inscription"]').click(function(){
+            //     alert("azdea");
+            //     acces_inscription();
+            //     //$('.modal').modal();
+            // })
+
+            // $('a[title|="modal_connexion"]').click(function(){
+            //     alert("azdea");
+            //     acces_connexion();
+            //     //$('.modal').modal();
+            // });
+
+            $("a[id|='newOffres']").click(function()
+            {
+                AfficherNewOffre();
+                $('.modal').modal();
+            });
+
+            $("#newDemandes").click(function()
+            {
+                AfficherNewDemande();
+                $('.modal').modal();
+            });
+        });
         </script>
     </head>
 
@@ -70,9 +72,25 @@
                             <li><a href="profil#deal" class="links">Mes deals</a></li>
                         </ul>
                         <ul id="id-nav-connect" class="right hide-on-med-and-down">
-                            <li><a href="#modal" class="links modal-trigger" title="modal_inscription">Inscription</a></li>
-                            <li><a href="#modal" class="links modal-trigger" title="modal_connexion">Connexion</a></li>
-                            <li id="connecter"></li>
+                            <ul id="connecter">
+                                <?php 
+                                if ($id == 0)
+                                {
+                                    ?>
+                                    <li><a href="#modal" class="links modal-trigger" title="modal_inscription" onclick="acces_inscription()">Inscription</a></li>
+                                    <li><a href="#modal" class="links modal-trigger" title="modal_connexion" onclick="acces_connexion()">Connexion</a></li>
+                                    <?php
+                                }
+                                else
+                                {
+                                    foreach($User as $unUser)
+                                    {
+                                        echo "<ul><li><a href='index.php/profil/index/".$unUser->idUser."'><img height='30' width='30' src='".$unUser->photoUser."'> ".$unUser->nomUser."</a></li>";
+                                        echo "<li><a href='#' onclick='deconnexion()'>Déconnexion</a></li></ul>";
+                                    }
+                                }
+                                ?>
+                            </ul>
                         </ul>
                     </div>
                 </div>

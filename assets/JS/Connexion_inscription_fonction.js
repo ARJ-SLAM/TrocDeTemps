@@ -36,8 +36,8 @@ function deconnexion()
 {
     $("#connecter").empty();
     $("#mobile_connecter").empty();
-    $('a[title|="modal_inscription"]').append("Inscription");
-    $('a[title|="modal_connexion"]').append("Connexion");
+    $('#connecter').append("<li><a href='#modal' class='links modal-trigger' title='modal_inscription' onclick='acces_inscription()'>Inscription</a></li><li><a href='#modal' class='links modal-trigger' title='modal_connexion' onclick='acces_connexion()'>Connexion</a></li>");
+    $('#mobile_connecter').append("<li><a href='#modal' class='links modal-trigger' title='modal_inscription' onclick='acces_inscription()'>Inscription</a></li><li><a href='#modal' class='links modal-trigger' title='modal_connexion' onclick='acces_connexion()'>Connexion</a></li>");
 }
 
 function acces_connexion()
@@ -50,6 +50,7 @@ function acces_connexion()
             {
                 $('#modal').empty();
                 $('#modal').append(data);
+                $('#modal').modal('open');
             },
             error:function()
             {
@@ -69,6 +70,7 @@ function acces_inscription()
             {
                 $('#modal').empty();
                 $('#modal').append(data);
+                $('#modal').modal('open');
             },
             error:function()
             {
@@ -82,20 +84,6 @@ function setInscription()
 {
     if ($("input[name=login]").val() != "" && $("input[name=mdp]").val() != "" && $("input[name=nomUser]").val() != "" && $("input[name=photoUser]").val() != "")
     {
-        // $namePhoto = $("input[name=photoUser]").val();
-        // $namePhoto = $namePhoto.split("\\");
-        // alert($namePhoto[$namePhoto.length-1]);
-        // const noelshack = require('noelshack')
-
-        // async function upload () {
-        //     $url = await noelshack.uploadFromFs('path/to/local/image.png')
-        //     alert("fichier upload a l'url : "+$url)
-        // }
-
-        // upload()
-        // .catch(err => {
-        //     alert("Erreur dans l'upload du fichier")
-        // })
         var valide = true;
         for(var i = 0; i < $("input[name=nomUser]").val().length; i++)
         {

@@ -5,6 +5,7 @@ class Controleur_Acces extends CI_Controller
     {
         $this->load->model("Jconnexion/Model_connexion_inscription");
         $data["User"] = $this->Model_connexion_inscription->getUserByNameAndPassword($_POST["login"], $_POST["password"]);
+        $data["id"] = $data["User"][0]->idUser;
         if ($data["User"] != "")
         {
             $this->load->view("Jconnexion/retour/connexion_ret", $data);
