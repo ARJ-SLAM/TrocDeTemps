@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/sio2/TrocDeTemps/';
+$config['base_url'] = 'http://localhost/bidule/Troc/';
 
 /*
 |--------------------------------------------------------------------------
@@ -36,7 +36,6 @@ $config['base_url'] = 'http://localhost/sio2/TrocDeTemps/';
 |
 */
 $config['index_page'] = '';
-
 /*
 |--------------------------------------------------------------------------
 | URI PROTOCOL
